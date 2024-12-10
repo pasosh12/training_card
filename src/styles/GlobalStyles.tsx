@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import myThemeStyled from "./myThemeStyled";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -10,6 +9,5 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body{
-         //background-color: ${myThemeStyled.colors.blue}
     }
 `
