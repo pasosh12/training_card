@@ -1,11 +1,12 @@
 import React from 'react';
-import styled from "styled-components";
+import styled  from "styled-components";
 import logo from "./assets/mainImage.jpg";
 import './App.css';
+import {ButtonStyled} from "./components/ButtonStyled";
 
 function App() {
     return (
-        <StyledDiv>
+        <StyledDiv className="body">
             <StyledCard>
                 <ImgStyled src={logo}/>
                 <StyledCardItems>
@@ -14,7 +15,7 @@ function App() {
                         venen.</p>
                     <ButtonContainer>
                         <ButtonStyled isActive={false}>See more </ButtonStyled>
-                        <ButtonStyled isActive={true}>Save</ButtonStyled>
+                        <ButtonStyled isActive>Save</ButtonStyled>
                     </ButtonContainer>
                 </StyledCardItems>
             </StyledCard>
@@ -55,21 +56,7 @@ const ButtonContainer = styled.div`
     margin: 19px 0 22px 0;
     width: 300px
 `
-type propsType = {
-    isActive: boolean,
-}
-const ButtonStyled = styled.button<propsType>`
-    background-color: ${(props) => (props.isActive ? "white" : "#4E71FE")};
-    color: ${(props) => (props.isActive ? "#007bff" : "#fff")};
-    border-color: ${(props) => (props.isActive ? "##007bff" : "#4E71FE")};
-    border: solid 1px;
-    border-radius: 5px;
-    font-size: 10px;
-    font-weight: 700;
-    width: 86px;
-    height: 30px;
-    margin-right: 12px;
-`
+
 const ImgStyled = styled.img`
     border-radius: 10px;
     width: 280px;
